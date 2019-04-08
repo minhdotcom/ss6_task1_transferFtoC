@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ss6_task1_transferFtoC</title>
+</head>
+<body>
+<h>Type the value in F to convert to C</h>
+<p>Fahrenheit (F)</p>
+<input id = "inputF" type = "number" placeholder = "Fahrenheit"
+    oninput = "temperatureConverter(this.value)"
+    onchange = "temperatureConverter(this.value)">
+</input>
+<p><br>Celsious (C):<span id = "outputCelsious"></span></p>
+
+<script>
+    function temperatureConverter(temperatureF){
+        temperatureF = parseFloat(temperatureF);
+        document.getElementById("outputCelsious").innerHTML = (temperatureF - 32) / 1.8;
+    }
+</script>
+</body>
+</html>
